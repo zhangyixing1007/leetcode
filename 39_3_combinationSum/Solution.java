@@ -1,5 +1,5 @@
 /*
-LeetCode No.39 Problem: https://leetcode.com/problems/combination-sum/
+LeetCode Problem No.39: https://leetcode.com/problems/combination-sum/
 Author: zhangyixing1007
 Idea: sort array, add from the smallest to largest until exceeding target
 time: 6 ms, beat 94.40%
