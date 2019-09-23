@@ -1,7 +1,7 @@
 /*
-LeetCode Problem No.39:    https://leetcode.com/problems/permutations/
+LeetCode Problem No.46:    https://leetcode.com/problems/permutations/
 Author:                    zhangyixing1007
-Idea:                      enumerate all the permutation, apply +1-1 = 0 to save space
+Idea:                      enumerate all the permutation, create a new ArrayList each time
 Time:                      45 ms, beat 5.10%
 Space:                     36.6MB, beat 93.95%
 */
