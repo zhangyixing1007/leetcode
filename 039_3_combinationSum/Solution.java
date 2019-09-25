@@ -1,9 +1,9 @@
 /*
-LeetCode Problem No.39: https://leetcode.com/problems/combination-sum/
-Author: zhangyixing1007
-Idea: sort array, add from the smallest to largest until exceeding target
-time: 6 ms, beat 94.40%
-space: 38.1MB, beat 93.19%
+LeetCode Problem No.39:     https://leetcode.com/problems/combination-sum/
+Author:                     zhangyixing1007
+Idea:                       sort array, add from the smallest to largest until exceeding target
+Time:                       6 ms, beat 94.40%
+Space:                      38.1MB, beat 93.19%
 */
 
 class Solution {
