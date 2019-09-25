@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.39:    https://leetcode.com/problems/next-permutation/
+LeetCode Problem No.31:    https://leetcode.com/problems/next-permutation/
 Author:                    zhangyixing1007
 Idea:                      find the first descending point -- if no such one, then it is the largest -- and apply math knowledge
 Time:                      1 ms, beat 100%
