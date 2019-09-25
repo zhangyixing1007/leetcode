@@ -1,8 +1,7 @@
 /*
-LeetCode No.39 
-https://leetcode.com/problems/combination-sum/
-Idea: add one number again and again until can not any more
-shorter but slower than 39_1
+LeetCode Problem No.39:     https://leetcode.com/problems/combination-sum/
+Author:                     zhangyixing1007
+Idea:                       add one number again and again until can not any more (shorter but slower than 39_1)
 */
 
 class Solution {
