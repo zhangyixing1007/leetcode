@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.226:    https://leetcode.com/problems/valid-parentheses/
+LeetCode Problem No.20:    https://leetcode.com/problems/valid-parentheses/
 Author:                     zhangyixing1007
 Idea:                       push "(" "{" "[" into stack , and while ")" "}" "]", check if top is "(" "{" "[" correspondingly
 Time:                       2 ms, beat 97.54%
