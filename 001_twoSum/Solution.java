@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.226:    https://leetcode.com/problems/two-sum/
+LeetCode Problem No.1:    https://leetcode.com/problems/two-sum/
 Author:                     zhangyixing1007
 Idea:                       loop once save values in HashMap, and check its complement
 Time:                       3 ms, beat 99.12%
