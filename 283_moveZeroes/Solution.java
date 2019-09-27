@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.283:    https://leetcode.com/problems/move-zeroes/
 Author:                     zhangyixing1007
-Idea:                       move nums[i] to the place it should be by exchanging until that place has been occupied correctly
+Idea:                       exchange nums[i] with the first zero appearred
 Time:                       0 ms, beat 100%
 Space:                      37.3MB, beat 95.82%
 */
