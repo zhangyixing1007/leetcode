@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.49:     https://leetcode.com/problems/two-sum/
 Author:                     zhangyixing1007
-Idea:                       the simplist brutal force
+Idea:                       the simplist brutal force, very very slow
 Time:                       600 ms, beat 5.02%
 Space:                      41.5MB, beat 98.98%
 */
