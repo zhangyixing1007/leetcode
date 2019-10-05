@@ -2,8 +2,8 @@
 LeetCode Problem No.64:     https://leetcode.com/problems/minimum-path-sum/
 Author:                     zhangyixing1007
 Idea:                       2-fold iteration, 2-D array as intermediate saving
-Time:                       2 ms, beat 99.72%
-Space:                      42.2 MB, beat 44.00%
+Time:                       4 ms, beat 85.06%
+Space:                      39.8 MB, beat 85.43%
 */
 
 class Solution {
