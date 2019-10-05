@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.75:     https://leetcode.com/problems/sort-colors/
 Author:                     zhangyixing1007
-Idea:                       left and right pointers, verbose but faster version
+Idea:                       left and right pointers, verbose version
 Time:                       0 ms, beat 100%
 Space:                      35.3 MB, beat 36.15%
 */
