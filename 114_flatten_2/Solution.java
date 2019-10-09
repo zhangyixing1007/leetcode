@@ -3,7 +3,7 @@ LeetCode Problem No.114:    https://leetcode.com/problems/flatten-binary-tree-to
 Author:                     zhangyixing1007
 Idea:                       recursion, very short version
 Time:                       1 ms, beat 99.38%
-Space:                      35.7 MB, beat 81.87%
+Space:                      36 MB, beat 81.11%
 */
 
 /**
