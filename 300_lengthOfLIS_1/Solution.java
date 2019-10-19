@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.3oo:    https://leetcode.com/problems/longest-increasing-subsequence/
+LeetCode Problem No.300:    https://leetcode.com/problems/longest-increasing-subsequence/
 Author:                     zhangyixing1007
 Idea:                       dynamic programming, O(n^2)
 Time:                       21 ms, beat 61.45%
