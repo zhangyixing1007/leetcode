@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.337:    https://leetcode.com/problems/house-robber-iii
 Author:                     zhangyixing1007
-Idea:                       recursion, no saving
+Idea:                       recursion, save in a HashMap
 Time:                       11 ms, beat 53.54%
 Space:                      37.9 MB, beat 78.95%
 */
