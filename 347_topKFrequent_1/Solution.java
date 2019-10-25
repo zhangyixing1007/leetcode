@@ -13,7 +13,7 @@ class Solution {
             map.put(num,map.getOrDefault(num,0)+1);
         }
         
-        List[] list = new List[nums.length+1];//!!
+        List[] list = new List[nums.length+1];
         for (int num:map.keySet()){
             int count = map.get(num);
             if (list[count]==null){
