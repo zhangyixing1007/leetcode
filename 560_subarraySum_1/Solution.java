@@ -1,4 +1,10 @@
-
+/*
+LeetCode Problem No.560:    https://leetcode.com/problems/subarray-sum-equals-k/
+Author:                     zhangyixing1007
+Idea:                       brute force
+Time:                       150 ms, beat 40.08%
+Space:                      38.3 MB, beat 93.52%
+*/
 
 class Solution {
     public int subarraySum(int[] nums, int k) {
