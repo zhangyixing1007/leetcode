@@ -3,7 +3,7 @@ LeetCode Problem No.010:    https://leetcode.com/problems/regular-expression-mat
 Author:                     zhangyixing1007
 Idea:                       recursion + save intermediate result each time
 Time:                       2 ms, beat 99.94%
-Space:                      64.92 MB, beat 87.64%
+Space:                      36.4 MB, beat 87.64%
 */
 
 class Solution {
