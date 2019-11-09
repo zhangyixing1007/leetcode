@@ -3,7 +3,7 @@ LeetCode Problem No.032:    https://leetcode.com/problems/longest-valid-parenthe
 Author:                     zhangyixing1007
 Idea:                       scan from left and right respectivly
 Time:                       2 ms, beat 99.83%
-Space:                      36.8 MB, beat 87.26%
+Space:                      37.6 MB, beat 81.71%
 */
 
 class Solution {
