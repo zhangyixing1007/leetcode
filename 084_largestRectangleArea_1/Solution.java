@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.084:    https://leetcode.com/problems/largest-rectangle-in-histogram
 Author:                     zhangyixing1007
-Idea:                       iteration, still slow but faster than easiest recursion
+Idea:                       brute force
 Time:                       705 ms, beat 14.92%
 Space:                      40.7 MB, beat 90.88%
 */
