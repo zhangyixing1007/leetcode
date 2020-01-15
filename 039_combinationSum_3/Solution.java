@@ -8,33 +8,27 @@ Space:                      38.1MB, beat 93.19%
 
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> list = new ArrayList<>();
-        
-        if (candidates.length == 0) return list;
-        if (target == 0) {list.add(new ArrayList<Integer>()); return list;}
-        
+        if (target==0||candidates==null||candidates.length==0) return list;
         Arrays.sort(candidates);
-        Stack<Integer> solution = new Stack<>();
-        backtrack(solution, target, list, candidates, 0);
-        
+        for (int i = 0; i<candidates.length; i++){
+            solution.push(candidates[i]);
+            helper(target-candidates[i], i, candidates);
+            solution.pop();
+        }
         return list;
     }
-    
-    private void backtrack(Stack<Integer> solution, int target, List<List<Integer>> list, int[]candidates, int start)
-    {
-        if (target==0) {list.add(new ArrayList(solution));}
-        
-        if (start < candidates.length)
-        {
-            for (int i = start; i < candidates.length; i++)
-            {
-                if (target - candidates[i] >= 0)
-                {
+    List<List<Integer>> list=new ArrayList<List<Integer>>(); 
+    Stack<Integer> solution=new Stack<Integer>();
+    void helper(int target, int start, int[] candidates){
+        if (target==0) list.add(new ArrayList<>(solution));
+        if (target>0){
+            for (int i=start; i<candidates.length; i++){
+                if (target-candidates[i]>=0){
                     solution.push(candidates[i]);
-                    backtrack(solution, target - candidates[i], list,candidates, i);
+                    helper(target-candidates[i], i, candidates);
                     solution.pop();
                 }
-                else{break;}
+                else break;
             }
         }
     }
