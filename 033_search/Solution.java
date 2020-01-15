@@ -39,5 +39,5 @@ class Solution {
         else if (nums[m]<target) return findTarget(nums,m+1,b,target);
         else return m;
     }
-        
+         
 }
