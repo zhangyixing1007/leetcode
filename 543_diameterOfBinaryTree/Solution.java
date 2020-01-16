@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.543:    https://leetcode.com/problems/diameter-of-binary-tree/
 Author:                     zhangyixing1007
-Idea:                       recursion to calculate depth and compare at the same time
+Idea:                       dfs to calculate length of node and compare max diameter each time
 Time:                       1 ms, beat 99.85%
 Space:                      37.2MB, beat 75.63%
 */
@@ -25,8 +25,7 @@ class Solution {
      
     private int max = 0; 
      
-    private int len(TreeNode root) 
-    { 
+    private int len(TreeNode root) { 
         if (root == null) return 0; 
         int l = len(root.left); 
         int r = len(root.right); 
