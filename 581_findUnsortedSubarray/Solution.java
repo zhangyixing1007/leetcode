@@ -25,7 +25,6 @@ class Solution {
         if (min==Integer.MAX_VALUE&&max==Integer.MIN_VALUE) return 0; 
         int l = 0; while (nums[l]<=min) l++; 
         int r = nums.length - 1; while (nums[r]>=max) r--; 
-        // return Math.max(r-l+1,0); 
         return r-l+1; 
     } 
 } 
