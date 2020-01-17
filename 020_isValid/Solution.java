@@ -6,27 +6,25 @@ Time:                       2 ms, beat 97.54%
 Space:                      34.1MB, beat 87.48%
 */
 
-import java.util.Stack;
-
 class Solution {
     public boolean isValid(String s) {
-        Stack<Character> bracket = new Stack<Character>();
-        for (int i = 0; i < s.length(); i++){
-            char c = s.charAt(i);
-            if (c == '('|| c == '{' || c == '[')
-            {bracket.push(c);}
+        Stack<Character> stack=new Stack<>();
+        for(int i=0; i<s.length(); i++){
+            char c=s.charAt(i);
+            if(c=='('||c=='{'||c=='[')
+                stack.push(c);
             else{
-                if (bracket.empty()==true) return false;
-                char t = bracket.pop();
-                if (c == ')'&& t!='(')
-                {return false;}
-                else if (c == ']'&& t!='[')
-                {return false;}
-                else if (c == '}'&& t!='{')
-                {return false;}                 
-            }       
+                if(stack.isEmpty())
+                    return false;
+                if(c==')'&&stack.peek()!='(')
+                    return false;
+                if(c=='}'&&stack.peek()!='{')
+                    return false;
+                if(c==']'&&stack.peek()!='[')
+                    return false;  
+                stack.pop();
+            }                
         }
-        if(bracket.empty()==true) return true;
-        else return false;
+        return stack.isEmpty();
     }
 }
