@@ -2,8 +2,8 @@
 LeetCode Problem No.198:    https://leetcode.com/problems/house-robber/
 Author:                     zhangyixing1007
 Idea:                       interesting loop
-Time:                       4 ms, beat 70.21%
-Space:                      41.9MB, beat 83.65%
+Time:                       0 ms, beat 100%
+Space:                      34.1MB, beat 47.64%
 */
 
 class Solution { 
