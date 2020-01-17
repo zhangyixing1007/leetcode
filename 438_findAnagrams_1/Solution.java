@@ -19,8 +19,7 @@ class Solution {
         for (char c:pc) {record[c-'a']++;} 
         int l = 0, r = 0, rest = p.length(); 
          
-        for (; r<p.length(); r++) 
-        { 
+        for (; r<p.length(); r++) { 
             char c = sc[r]; 
             record[c-'a']--; 
             if (record[c-'a']>=0) rest--; 
@@ -28,8 +27,7 @@ class Solution {
          
         if (rest==0) list.add(l); 
          
-        while (r<s.length()) 
-        { 
+        while (r<s.length()) { 
             char c = sc[l++]; 
             if (record[c-'a']>=0) rest++; 
             record[c-'a']++; 
