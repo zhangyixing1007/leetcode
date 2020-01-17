@@ -1,9 +1,9 @@
 /*
 LeetCode Problem No.226:    https://leetcode.com/problems/invert-binary-tree/
 Author:                     zhangyixing1007
-Idea:                       recursive
-Time:                       1 ms, beat 88.75%
-Space:                      35.5MB, beat 32.81%
+Idea:                       recursion
+Time:                       0 ms, beat 100%
+Space:                      34.3MB, beat 35.04%
 */
 
 /**
