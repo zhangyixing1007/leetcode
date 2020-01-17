@@ -1,8 +1,8 @@
 /*
 LeetCode Problem No.104:    https://leetcode.com/problems/maximum-depth-of-binary-tree/
 Author:                     zhangyixing1007
-Idea:                       recursion, onle one line is okay
-Time:                       1 ms, beat 97.99%
+Idea:                       one-line recursion
+Time:                       0 ms, beat 100%
 Space:                      37.7MB, beat 40.29%
 */
 
