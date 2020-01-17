@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.198:    https://leetcode.com/problems/house-robber/
 Author:                     zhangyixing1007
-Idea:                       simple recursion, no saving
+Idea:                       interesting loop
 Time:                       4 ms, beat 70.21%
 Space:                      41.9MB, beat 83.65%
 */
