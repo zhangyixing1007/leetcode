@@ -2,7 +2,7 @@
 LeetCode Problem No.160:    https://leetcode.com/problems/intersection-of-two-linked-lists/
 Author:                     zhangyixing1007
 Idea:                       a+b = b+a, A end -> B beginning, B end -> A beginning
-Time:                       2 ms, beat 94.22%
+Time:                       1 ms, beat 100%
 Space:                      38.6MB, beat 84.07%
 */
 
@@ -20,13 +20,12 @@ Space:                      38.6MB, beat 84.07%
 */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null||headB == null) return null;
-        ListNode A = headA; ListNode B = headB;
-        while(headA!=headB)
-        {
-            headA = headA == null? B:headA.next;
-            headB = headB == null? A:headB.next;
+        if (headA==null||headB==null) return null;
+        ListNode A=headA, B=headB;
+        while(A!=B){
+            A=A==null? headB:A.next;
+            B=B==null? headA:B.next;
         }
-        return headA;
+        return A;
     }
 }
