@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.70:     https://leetcode.com/problems/climbing-stairs/
 Author:                     zhangyixing1007
-Idea:                       iteration or recursion both okay, very classical 
+Idea:                       iteration, save result in array 
 Time:                       0 ms, beat 100%
 Space:                      32.8MB, beat 74.43%
 */
