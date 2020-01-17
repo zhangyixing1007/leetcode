@@ -13,8 +13,7 @@ class Solution {
         
         int maxEndingHere = nums[0];
         int maxSoFar = nums[0];
-        for (int i = 1; i<nums.length; i++)
-        {
+        for (int i = 1; i<nums.length; i++){
             maxEndingHere = Math.max(nums[i],nums[i]+maxEndingHere);
             maxSoFar = Math.max(maxSoFar, maxEndingHere);
         }
