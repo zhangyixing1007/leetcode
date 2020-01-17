@@ -15,6 +15,7 @@ Space:                      37.5MB, beat 68.40%
  *     TreeNode(int x) { val = x; }
  * }
  */
+
 class Solution {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) return true;
@@ -23,7 +24,8 @@ class Solution {
     
     private boolean checkChildren (TreeNode left, TreeNode right)
     {
-        if ((left!=null && right!=null)==false) return (left==null && right == null);            
+        if (left==null||right==null) 
+            return (left==null && right == null);            
         if (left.val != right.val) return false;
         return (checkChildren(left.left,right.right) && checkChildren(left.right,right.left));
     }
