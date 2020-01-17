@@ -6,14 +6,13 @@ Time:                       1 ms, beat 96.69%
 Space:                      33.4 MB, beat 77.38%
 */
 
-class Solution { 
-    public int hammingDistance(int x, int y) { 
-        int diff = 0;       
-        while(x!=0||y!=0)         
-        { 
-            if (x%2!=y%2) diff++; 
-            x = x/2; y = y/2; 
-        } 
-        return diff; 
-    } 
-} 
+class Solution {
+    public int hammingDistance(int x, int y) {
+        int ans=0;
+        while(x!=0||y!=0){
+            ans+=(x%2)^(y%2);
+            x>>=1;y>>=1;
+        }
+        return ans;
+    }
+}
