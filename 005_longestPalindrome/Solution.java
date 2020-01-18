@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.005:    https://leetcode.com/problems/longest-substring-without-repeating-characters/
+LeetCode Problem No.005:    https://leetcode.com/problems/longest-palindromic-substring/
 Author:                     zhangyixing1007
 Idea:                       separate odd and even cases
 Time:                       8 ms, beat 92.92%
