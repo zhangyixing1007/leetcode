@@ -16,33 +16,19 @@ Space:                      36 MB, beat 81.87%
 * }
 */
 
-class Solution
-{
-    public void flatten(TreeNode root)
-    {
-        if (root!=null)
-        {
-            root = flat(root);
-        }
+class Solution {
+    public void flatten(TreeNode root) {
+        dfs(root);
     }
-    
-    private TreeNode flat(TreeNode root)
-    {
+    TreeNode dfs(TreeNode root){
         if (root==null) return null;
-        TreeNode r = root;
-        TreeNode right = root.right;
-        if (root.left!=null)
-        {
-            TreeNode left = root.left;
-            root.left = null;
-            root.right = flat(left);
-        }
-        else {root.right = flat(right); return root;}
-        if (right!=null)
-        {
-            while (r.right!=null) r = r.right;
-            r.right = flat(right);  
-        }
+        if (root.left==null&&root.right==null) return root;
+        TreeNode tmp=root.right;
+        root.right=dfs(root.left);
+        root.left=null;
+        TreeNode curr=root;
+        while (curr!=null&&curr.right!=null) curr=curr.right;
+        curr.right=dfs(tmp);
         return root;
     }
 }
