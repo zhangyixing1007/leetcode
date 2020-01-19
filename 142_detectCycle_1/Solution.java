@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.142:    https://leetcode.com/problems/linked-list-cycle-ii/
 Author:                     zhangyixing1007
-Idea:                       two pointers to check loop, and then Floyd Algorithm 
+Idea:                       brute force
 Time:                       8 ms, beat 31.11%
 Space:                      36.2 MB, beat 5.03%
 */
@@ -18,13 +18,10 @@ Space:                      36.2 MB, beat 5.03%
 * }
 */
 
-public class Solution
-{
-    public ListNode detectCycle(ListNode head)
-    {
+public class Solution{
+    public ListNode detectCycle(ListNode head){
         Set<ListNode> set = new HashSet<>();
-        while(head!=null&&(set.isEmpty()||!set.contains(head)))
-        {
+        while(head!=null&&(set.isEmpty()||!set.contains(head))){
             set.add(head);
             head = head.next;
         }
