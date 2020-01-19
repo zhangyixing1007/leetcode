@@ -2,8 +2,8 @@
 LeetCode Problem No.102:    https://leetcode.com/problems/binary-tree-level-order-traversal/
 Author:                     zhangyixing1007
 Idea:                       queue to keep record, root to separate each level (actually, an int could do it)
-Time:                       2 ms, beat 81.87%
-Space:                      36.3 MB, beat 48.09%
+Time:                       1 ms, beat 98.79%
+Space:                      36.1 MB, beat 92.5%
 */
 
 /**
@@ -15,36 +15,34 @@ Space:                      36.3 MB, beat 48.09%
 *     TreeNode(int x) { val = x; }
 * }
 */
+
 class Solution {
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> list = new ArrayList<>();
-        Queue<TreeNode> q = new LinkedList<>();
+    public List<List<Integer>> levelOrder(TreeNode root) {       
+        List<List<Integer>> list=new ArrayList<>();
         if (root==null) return list;
-        TreeNode curr = root;
+        
+        Queue<TreeNode> q=new LinkedList<>();
+        List<Integer> l=new ArrayList<>(); 
+        l.add(root.val);list.add(l);
         if (root.left!=null) q.add(root.left);
-        if (root.right!=null) q.add(root.right);
-        q.add(curr);
-        List<Integer> first = new ArrayList<>();
-        first.add(curr.val);
-        list.add(first);
-        while (true)
-        {
-            List<Integer> l = new ArrayList<>();
-            while(!q.isEmpty()&&q.peek()!=root)
-            {
-                curr = q.poll();
-                l.add(curr.val);
-                if (curr.left!=null) q.add(curr.left);
-                if (curr.right!=null) q.add(curr.right);
+        if (root.right!=null) q.add(root.right);  
+        q.add(root);
+        l=new ArrayList<>();
+        while (!q.isEmpty()){
+            TreeNode curr=q.poll();
+            if (curr==root){
+                if (l.size()!=0) list.add(l);
+                l=new ArrayList<>();
+                if (q.isEmpty()) break;
+                else {
+                    q.add(root);
+                    curr=q.poll();                    
+                }
             }
-            if (l.size()!=0) list.add(l);
-            if (!q.isEmpty()&&q.peek()==root)
-            {
-                curr = q.poll();
-                if(q.isEmpty()) break;
-                else q.add(curr);
-            }            
+            l.add(curr.val);
+            if (curr.left!=null) q.add(curr.left);
+            if (curr.right!=null) q.add(curr.right);
         }
-        return list;
+        return list;           
     }
 }
