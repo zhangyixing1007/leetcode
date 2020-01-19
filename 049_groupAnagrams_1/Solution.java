@@ -16,27 +16,22 @@ class Solution {
         t.add(strs[0]);
         list.add(t);
         
-        for (int i = 1; i < strs.length; i++)
-        {
+        for (int i = 1; i < strs.length; i++){
             String s0 = strs[i];
             int flag = 0;
-            for (List<String> l:list)
-            {                            
+            for (List<String> l:list){                            
                 String s = l.get(0);                
-                if (s.length()!=s0.length())
-                {continue;}
+                if (s.length()!=s0.length()){continue;}
                       
-                if (s.length()==0&&s0.length()==0)
-                {l.add(s0);flag = 1; continue;}
-                
+                if (s.length()==0&&s0.length()==0){
+                    l.add(s0);flag = 1; continue;
+                }
                 int[] tmp = new int[26];
-                for (int j = 0; j < s.length(); j++)
-                {
+                for (int j = 0; j < s.length(); j++){
                     tmp[s.charAt(j)-'a']++;
                 }               
                 
-                for (int j = 0; j < s0.length(); j++)
-                {
+                for (int j = 0; j < s0.length(); j++){
                     tmp[s0.charAt(j)-'a']--;
                     if (tmp[s0.charAt(j)-'a']<0) break;
                     else if (j==s0.length()-1)
@@ -44,8 +39,7 @@ class Solution {
                 }                
                  if (flag == 1) break;
             }
-            if (flag == 0)
-            {
+            if (flag == 0){
                 List<String> nlist = new ArrayList<>();
                 nlist.add(s0);
                 list.add(nlist);
