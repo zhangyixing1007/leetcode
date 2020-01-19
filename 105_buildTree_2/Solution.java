@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.105:    https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 Author:                     zhangyixing1007
-Idea:                       recursion, preorder spread
+Idea:                       HashMap, determine recursion sequence
 Time:                       3 ms, beat 98.39%
 Space:                      35.8 MB, beat 99.76%
 */
@@ -16,10 +16,8 @@ Space:                      35.8 MB, beat 99.76%
  * }
  */
 
-class Solution 
-{
-    public TreeNode buildTree(int[] preorder, int[] inorder)
-    {
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder){
         this.preorder = preorder;
         this.inorder = inorder;
         for (int i = 0; i < inorder.length; i++) map.put(inorder[i],i);
@@ -31,11 +29,9 @@ class Solution
     private int[] preorder;
     private int[] inorder;
     
-    private TreeNode build(int a, int b)
-    {
+    private TreeNode build(int a, int b){
         if (a == b) return null;
         int value = preorder[now++];
-        // now ++;
         int id = map.get(value);
         TreeNode root = new TreeNode(value);
         root.left = build(a,id);
