@@ -14,15 +14,12 @@ class Solution {
         
         int[] sum = new int[n];
         System.arraycopy(grid[0],0,sum,0,n);
-        for (int j = 1; j < n; j++)
-        {
+        for (int j = 1; j < n; j++){
             sum[j] += sum[j-1];
         }
-        for (int i = 1; i < m; i++)
-        {
+        for (int i = 1; i < m; i++){
             sum[0] = sum[0] + grid[i][0];
-            for (int j = 1; j < n; j++)
-            {
+            for (int j = 1; j < n; j++){
                 sum[j] = sum[j-1]<sum[j]? (sum[j-1] + grid[i][j]) : (sum[j] + grid[i][j]);
             }
         }
