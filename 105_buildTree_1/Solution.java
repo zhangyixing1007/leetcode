@@ -2,8 +2,8 @@
 LeetCode Problem No.105:    https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 Author:                     zhangyixing1007
 Idea:                       recursion, record the start and end index of left/right tree in two arrays
-Time:                       16 ms, beat 56.95%
-Space:                      42.3 MB, beat 25.05%
+Time:                       20 ms, beat 16.03%
+Space:                      42.6 MB, beat 23.74%
 */
 
 /**
@@ -16,35 +16,27 @@ Space:                      42.3 MB, beat 25.05%
 * }
 */
 
-class Solution
-{
-    public TreeNode buildTree(int[] preorder, int[] inorder)
-    {
-        if (preorder.length==0) return null;
-        if (preorder.length!=inorder.length) return null;
-        
-        this.preorder = preorder;
-        this.inorder = inorder;
-        TreeNode root = build(0,0,preorder.length-1,0,inorder.length-1);
-        return root;
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        this.pre=preorder;
+        this.in=inorder;
+        int len=preorder.length;
+        return builder(0, len, 0, len);
     }
-    
-    private int[] preorder;
-    private int[] inorder;
-    private TreeNode build(int r, int pa, int pb, int ia, int ib)
-    {
-        if (ia > ib) return null;
-        if (ia == ib) return new TreeNode(preorder[r]);
-        for (int i = ia; i <= ib; i++)
-        {
-            if (preorder[r] == inorder[i])
-            {
-                TreeNode root = new TreeNode(preorder[r]);
-                root.left = build(pa+1,pa+1,pa-ia+i,ia,i-1);
-                root.right = build(pb-ib+i+1,pb-ib+i+1,pb,i+1,ib);
-                return root;
+    int[] pre;
+    int[] in;
+    TreeNode builder(int p1, int p2, int o1, int o2){
+        if (p1==p2) return null;
+        if (p1+1==p2) return new TreeNode(pre[p1]);
+        TreeNode root=new TreeNode(pre[p1]);
+        int l=-1;
+        for(int i=o1; i<o2; i++){
+            if (pre[p1]==in[i]){
+                l=i; break;
             }
         }
-        return null;
+        root.left=builder(p1+1, l-o1+p1+1, o1, l);
+        root.right=builder(l+1-o2+p2, p2, l+1, o2);
+        return root;
     }
 }
