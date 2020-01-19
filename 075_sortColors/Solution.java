@@ -8,22 +8,18 @@ Space:                      35.3 MB, beat 36.15%
 
 class Solution {
     public void sortColors(int[] nums) {
-        if (nums.length>=2){
-            int left = 0, right = nums.length-1;
-            while(left<nums.length&&nums[left]==0) left++;
-            while(right>-1&&nums[right]==2) right--;
-
-            for (int i = left; i <= right;){
-                if (nums[i] == 0) {
-                    if (i==left) {i++;left++;}
-                    int tmp = nums[i];nums[i] = nums[left];nums[left++] = tmp;
-                    if (nums[right] == 2) right--;
-                }
-                else if (nums[i] == 2){
-                    int tmp = nums[i];nums[i] = nums[right];nums[right--] = tmp;
-                    if (nums[left] == 0) {left++; i++;}
-                }
-                else if (nums[i] == 1) i++;
+        if(nums.length>=2){
+            int l=0, r=nums.length-1;
+            while(l<nums.length&&nums[l]==0) l++;
+            while(r>-1&&nums[r]==2) r--;
+            for(int i=l; i<r+1; ){
+                if(nums[i]==0){
+                    if (i==l) {i++;l++;}
+                    int t=nums[i];nums[i]=nums[l];nums[l++]=t;
+                } else if (nums[i]==2){
+                    int t=nums[i];nums[i]=nums[r];nums[r--]=t;
+                    if(nums[l]==0) {l++;i++;}                    
+                } else i++;
             }
         }
     }
