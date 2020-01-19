@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.98:     https://leetcode.com/problems/validate-binary-search-tree/
 Author:                     zhangyixing1007
-Idea:                       irecursion
+Idea:                       recursion, tree=root+left-subtree+right-subtree
 Time:                       1 ms, beat 99.45%
 Space:                      36.4 MB, beat 95.33%
 */
@@ -15,15 +15,13 @@ Space:                      36.4 MB, beat 95.33%
 *     TreeNode(int x) { val = x; }
 * }
 */
-class Solution
-{
-    public boolean isValidBST(TreeNode root)
-    {
+
+class Solution{
+    public boolean isValidBST(TreeNode root){
         return helper(root,null,null);
     }
     
-    private boolean helper(TreeNode node,Integer a, Integer b)
-    {
+    private boolean helper(TreeNode node,Integer a, Integer b){
         if (node == null) return true;
         
         if(a!=null&&node.val<=a) return false;
