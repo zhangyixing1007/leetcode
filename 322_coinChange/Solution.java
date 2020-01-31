@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.322:    https://leetcode.com/problems/coin-change
 Author:                     zhangyixing1007
-Idea:                       dynamic programming
+Idea:                       dynamic programming, similar to 279
 Time:                       14 ms, beat 90.05%
 Space:                      35.8 MB, beat 95.25%
 */
