@@ -53,7 +53,7 @@ class Trie {
         TrieNode node = root;
         for (char c:prefix.toCharArray()){
             node = node.get(c);
-            if (node == null) return false;
+            if (node == null) return false; 
         }
         return true;        
     }
