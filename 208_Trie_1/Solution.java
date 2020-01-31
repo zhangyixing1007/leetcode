@@ -6,18 +6,13 @@ Time:                       114 ms, beat 88.96%
 Space:                      51.6 MB, beat 98.32%
 */
 
-class Trie
-{
-
-
-    private class TreeNode
-    {
+class Trie{
+    private class TreeNode{
         char ch;
         boolean end;
         Map<Character,TreeNode> map;       
         
-        private TreeNode(char c)
-        {
+        private TreeNode(char c){
             ch = c;
             end = false;
             map = new HashMap<>();
@@ -25,27 +20,22 @@ class Trie
     }
     /** Initialize your data structure here. */
     
-    public Trie()
-    {
+    public Trie(){
         root = new TreeNode('#');        
     }
     
     TreeNode root;
     /** Inserts a word into the trie. */
-    public void insert(String word)
-    {
+    public void insert(String word){
         TreeNode head = root;
         int i = 0;
-        while (i < word.length())
-        {
+        while (i < word.length()){
             char c = word.charAt(i);
-            if (head.map.containsKey(c))
-            {
+            if (head.map.containsKey(c)){
                 head = head.map.get(c);
                 i++;
             }
-            else
-            {
+            else{
                 TreeNode node = new TreeNode(c);
                 head.map.put(c,node);
                 head = node;
@@ -56,20 +46,16 @@ class Trie
     }
     
     /** Returns if the word is in the trie. */
-    public boolean search(String word)
-    {
+    public boolean search(String word){
         TreeNode head = root;
         int i = 0;
-        while (i < word.length())
-        {
+        while (i < word.length()){
             char c = word.charAt(i);
-            if (head.map.containsKey(c))
-            {
+            if (head.map.containsKey(c)){
                 head = head.map.get(c);
                 i++;
             }
-            else
-            {
+            else{
                 return false;
             }
         }        
@@ -77,20 +63,16 @@ class Trie
     }
     
     /** Returns if there is any word in the trie that starts with the given prefix. */
-    public boolean startsWith(String prefix)
-    {
+    public boolean startsWith(String prefix){
         TreeNode head = root;
         int i = 0;
-        while (i < prefix.length())
-        {
+        while (i < prefix.length()){
             char c = prefix.charAt(i);
-            if (head.map.containsKey(c))
-            {
+            if (head.map.containsKey(c)){
                 head = head.map.get(c);
                 i++;
             }
-            else
-            {
+            else{
                 return false;
             }
         }      
