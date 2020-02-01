@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.338:    https://leetcode.com/problems/counting-bits
 Author:                     zhangyixing1007
-Idea:                       iteration, arithmetic shift to the right, faster than i/2 and i%2
+Idea:                       iteration, >>, &, faster than Version 2
 Time:                       1 ms, beat 99.96%
 Space:                      38.4 MB, beat 86.52%
 */
