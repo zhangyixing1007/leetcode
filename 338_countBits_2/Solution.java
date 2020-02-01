@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.338:    https://leetcode.com/problems/counting-bits
 Author:                     zhangyixing1007
-Idea:                       iteration, >>, %
+Idea:                       iteration, /, %
 Time:                       2 ms, beat 94.32%
 Space:                      38.8 MB, beat 86.33%
 */
