@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.647:    https://leetcode.com/problems/palindromic-substrings/
 Author:                     zhangyixing1007
-Idea:                       use private function to avoid if-else discussion
+Idea:                       subfunction for separate cases+loop
 Time:                       2 ms, beat 94.79%
 Space:                      34.4 MB, beat 92.34%
 */
