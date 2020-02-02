@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.207:    https://leetcode.com/problems/course-schedule/
 Author:                     zhangyixing1007
-Idea:                       topological sorting, dfs, find circle start from each vertex
+Idea:                       dfs, find circle
 Time:                       6 ms, beat 95.72%
 Space:                      44.3 MB, beat 71.56%
 */
