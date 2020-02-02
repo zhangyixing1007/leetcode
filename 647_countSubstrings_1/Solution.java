@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.647:    https://leetcode.com/problems/palindromic-substrings/
 Author:                     zhangyixing1007
-Idea:                       trivial trick in panlindrome
+Idea:                       trivial trick in panlindrome, insert '#'
 Time:                       3 ms, beat 84.48%
 Space:                      34.5 MB, beat 91.44%
 */
