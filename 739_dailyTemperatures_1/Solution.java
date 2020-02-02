@@ -14,6 +14,6 @@ class Solution {
             while(i+d < T.length && T[i] >= T[i+d]){d++;}
             if ((i+d)<T.length) ans[i] = d;
         }
-        return ans;
+        return ans; 
     }
 }
