@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.148:    https://leetcode.com/problems/sort-list/
 Author:                     zhangyixing1007
-Idea:                       two pointers to check loop, and then Floyd Algorithm 
+Idea:                       merge sort + Floyd Algorithm 
 Time:                       4 ms, beat 96.84%
 Space:                      39.3 MB, beat 98.65%
 */
@@ -15,15 +15,12 @@ Space:                      39.3 MB, beat 98.65%
  * }
  */
  
-class Solution 
-{
-    public ListNode sortList(ListNode head) 
-    {
+class Solution{
+    public ListNode sortList(ListNode head){
         if (head==null||head.next==null) return head;
         ListNode fast = head.next;
         ListNode slow = head;
-        while (fast!=null && fast.next!=null)
-        {
+        while (fast!=null && fast.next!=null){
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -34,12 +31,13 @@ class Solution
         
         ListNode pre = new ListNode(0);
         slow = pre;
-        while (head!=null&&curr!=null)
-        {
-            if (head.val<curr.val)
-            {pre.next = head; pre = pre.next; head = head.next;}
-            else
-            {pre.next = curr; pre = pre.next; curr = curr.next;}
+        while (head!=null&&curr!=null){
+            if (head.val<curr.val){
+                pre.next = head; pre = pre.next; head = head.next;
+            }
+            else{
+                pre.next = curr; pre = pre.next; curr = curr.next;
+            }
         }
         pre.next = head==null? curr:head;
         return slow.next;            
