@@ -8,31 +8,29 @@ Space:                      44.3 MB, beat 71.56%
 
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if (numCourses == 0||prerequisites.length==0) return true;
-        HashSet[] nextVt = new HashSet[numCourses];
+        HashSet[] nexts=new HashSet[numCourses];
         for (int i = 0; i < numCourses; i++){
-            nextVt[i] = new HashSet<Integer>();
+            nexts[i] = new HashSet<Integer>();
+        }        
+        for (int[] pre:prerequisites){
+            nexts[pre[1]].add(pre[0]);
         }
-        for (int[] entry : prerequisites){
-            nextVt[entry[1]].add(entry[0]);
-        }
-        int[] visited = new int[numCourses];
-        for (int i = 0; i < numCourses; i++){
-            if(hasCircle(i,nextVt,visited)) 
-                return false;
+        int[] visited=new int[numCourses];
+        for (int i=0; i<numCourses; i++){
+            if(hasCircle(i, nexts, visited)) return false;
         }
         return true;
     }
     
-    boolean hasCircle(int i, HashSet<Integer>[] nextVt, int[] visited){
-        if (visited[i] == -1) return true;
-        if (visited[i] == 1) return false;
-        visited[i] = -1;
-        for (Integer next : nextVt[i]){
-            if (hasCircle(next,nextVt,visited))
+    boolean hasCircle(int i, HashSet<Integer>[] nexts, int[] visited){
+        if(visited[i]==-1) return true;
+        if(visited[i]==1) return false;
+        visited[i]=-1;
+        for(int next:nexts[i]){
+            if(hasCircle(next, nexts, visited))
                 return true;
         }
-        visited[i] = 1;
+        visited[i]=1;
         return false;
     }
 }
