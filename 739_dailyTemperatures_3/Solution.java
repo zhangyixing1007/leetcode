@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.739:    https://leetcode.com/problems/daily-temperatures/
 Author:                     zhangyixing1007
-Idea:                       start from the end, skip smaller items by their answer, faster than Version 2
+Idea:                       start from the right, skip smaller elements, clearer than Version 2
 Time:                       5 ms, beat 98.27%
 Space:                      42.5 MB, beat 94.09%
 */
