@@ -38,9 +38,7 @@ class Solution {
                 nums[i] = nums[exchange];
                 nums[exchange] = tmp;
                 int [] copy = new int[n-i-1];
-                System.arraycopy(nums,i+1,copy,0,n-i-1);
-                Arrays.sort(copy);
-                System.arraycopy(copy,0,nums,i+1,n-i-1);
+                Arrays.sort(nums,i+1,nums.length);
             }
         }
     }
