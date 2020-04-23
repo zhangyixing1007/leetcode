@@ -8,17 +8,20 @@ Space:                      36.3 MB, beat 88.16%
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        int[] record=new int[128];
-        Arrays.fill(record,-1);
-        int len=0, maxLen=0;
-        for(int i=0; i<s.length(); i++){
-            char c=s.charAt(i);
-            if(record[c]==-1){
-                record[c]=i; len++; maxLen=Math.max(len,maxLen);
-            } else {
-                len=Math.min(len+1,i-record[c]); maxLen=Math.max(len,maxLen);
-                record[c]=i;
+        if(s==null||s.length()==0) return 0;
+        int[] prev=new int[128];
+        Arrays.fill(prev,-1);
+        char[] cs=s.toCharArray();
+        int maxLen=0, len=0;
+        for(int i=0; i<cs.length; i++){
+            char c=cs[i];
+            if(prev[c]==-1){
+                len++;
+            }else{
+                len=Math.min(len+1, i-prev[c]);
             }
+            maxLen=Math.max(maxLen,len);
+            prev[c]=i;
         }
         return maxLen;
     }
