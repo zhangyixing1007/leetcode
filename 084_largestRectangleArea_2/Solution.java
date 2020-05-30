@@ -4,7 +4,7 @@ Author:                     zhangyixing1007
 Idea:                       divide and conquer
 Time:                       254 ms, beat 43.65%
 Space:                      42.3 MB, beat 54.71%
-*/
+*/ 
 
 class Solution {
     int maxArea = 0;
