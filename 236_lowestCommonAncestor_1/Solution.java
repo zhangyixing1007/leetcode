@@ -16,17 +16,14 @@ Space:                      35.3 MB, beat 82.06%
 * }
 */
 
-class Solution
-{
+class Solution{
     TreeNode ancestor = null;
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
-    {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q){
         dfs(root,p,q);
         return ancestor;
     }
     
-    private int dfs(TreeNode root, TreeNode p, TreeNode q)
-    {
+    private int dfs(TreeNode root, TreeNode p, TreeNode q){
         if (root==null) return 0;
         int left = dfs(root.left,p,q);
         int right = dfs(root.right,p,q);
