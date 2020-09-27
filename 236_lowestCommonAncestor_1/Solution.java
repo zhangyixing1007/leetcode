@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.236:    https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 Author:                     zhangyixing1007
-Idea:                       dfs
+Idea:                       dfs, recursion
 Time:                       9 ms, beat 97.34%
 Space:                      35.3 MB, beat 82.06%
 */
