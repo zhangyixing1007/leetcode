@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.144:    https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
 Author:                     zhangyixing1007
-Idea:                       dfs, recursion
+Idea:                       dfs, iteration
 Time:                       0 ms, beat 100%
 Space:                      36.9 MB, beat 77.01%
 */
