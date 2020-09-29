@@ -33,6 +33,6 @@ class Solution {
         if(root==null) return;
         postOrder(root.left);
         postOrder(root.right);
-        ans.add(root.val);
+        ans.add(root.val); 
     }
 }
