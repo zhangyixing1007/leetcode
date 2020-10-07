@@ -1,7 +1,7 @@
 /*
 LeetCode Problem No.445:    https://leetcode.com/problems/add-two-numbers-ii/
 Author:                     zhangyixing1007
-Idea:                       StringBuilder, simiar to 002
+Idea:                       StringBuilder, similar to 002
 Time:                       13 ms, beat 5.96%
 Space:                      40.3 MB, beat 95.83%
 */
