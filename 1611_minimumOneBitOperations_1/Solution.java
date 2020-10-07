@@ -1,9 +1,9 @@
 /*
-LeetCode Problem No.5533:   https://leetcode-cn.com/problems/design-parking-system/
+LeetCode Problem No.1611:   https://leetcode-cn.com/problems/design-parking-system/
 Author:                     zhangyixing1007
 Idea:                       memory recursion
-Time:                       4 ms
-Space:                      37 MB
+Time:                       4 ms, beat 13.44%
+Space:                      36.8 MB, beat 9,68%
 */
 
 class Solution {
