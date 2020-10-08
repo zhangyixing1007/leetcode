@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.105:    https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+LeetCode Problem No.0105:   https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 Author:                     zhangyixing1007
 Idea:                       recursion, record the start and end index of left/right tree in two arrays
 Time:                       20 ms, beat 16.03%
