@@ -1,7 +1,7 @@
 /*
-LeetCode Problem No.142:    https://leetcode.com/problems/linked-list-cycle-ii/
+LeetCode Problem No.0142:   https://leetcode.com/problems/linked-list-cycle-ii/
 Author:                     zhangyixing1007
-Idea:                       brute force
+Idea:                       HashSet, brute force
 Time:                       8 ms, beat 31.11%
 Space:                      36.2 MB, beat 5.03%
 */
