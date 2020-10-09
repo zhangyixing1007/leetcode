@@ -1,9 +1,9 @@
 /*
-LeetCode Problem No.141:    https://leetcode.com/problems/linked-list-cycle/
+LeetCode Problem No.0141:   https://leetcode.com/problems/linked-list-cycle/
 Author:                     zhangyixing1007
 Idea:                       two pointers, fast and slow
 Time:                       0 ms, beat 100%
-Space:                      36.2MB, beat 99.61%
+Space:                      34.8MB, beat 34.47%
 */
 
 /**
@@ -20,13 +20,13 @@ Space:                      36.2MB, beat 99.61%
 
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        if(head==null) return false;
-        ListNode slow=head, fast=head.next;
-        while (slow!=fast){
-            if(fast==null||fast.next==null) return false;
-            slow=slow.next;
+        if(head==null||head.next==null) return false;
+        ListNode fast=head;
+        while(fast!=null&&fast.next!=null){
+            head=head.next;
             fast=fast.next.next;
+            if(head==fast) return true;
         }
-        return true;
+        return false;
     }
 }
