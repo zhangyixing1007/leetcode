@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.142:    https://leetcode.com/problems/linked-list-cycle-ii/
+LeetCode Problem No.0142:   https://leetcode.com/problems/linked-list-cycle-ii/
 Author:                     zhangyixing1007
 Idea:                       two pointers to check loop, and then Floyd Algorithm 
 Time:                       0 ms, beat 100%
