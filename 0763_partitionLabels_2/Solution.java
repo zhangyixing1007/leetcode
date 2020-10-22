@@ -1,5 +1,5 @@
 /*
-LeetCode Problem No.0763:   https://link.zhihu.com/?target=https%3A//leetcode-cn.com/problems/partition-labels/
+LeetCode Problem No.0763:   https://leetcode-cn.com/problems/partition-labels/
 Author:                     zhangyixing1007
 Idea:                       count occurence
 Time:                       10 ms, beat 28.46%
