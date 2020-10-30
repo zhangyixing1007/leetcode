@@ -2,8 +2,8 @@
 LeetCode Problem No.0463:   https://leetcode-cn.com/problems/island-perimeter/
 Author:                     zhangyixing1007
 Idea:                       dfs, recursion
-Time:                       9 ms, beat 56.99%
-Space:                      39.7 MB, beat 48.90%
+Time:                       13 ms, beat 11.01%
+Space:                      40.4 MB, beat 5.03%
 */
 
 // 基本原理      
